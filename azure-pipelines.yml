@@ -8,12 +8,15 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
+  environment:
+    name: Dev
 
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-
+  environment:
+    name: Dev
 steps:
 - task: NuGetToolInstaller@1
 
